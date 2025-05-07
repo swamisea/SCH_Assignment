@@ -159,11 +159,8 @@ export class PatientsComponent {
     ngOnInit() {
       this.sub = this.searchSvc.searchRequest
         .subscribe((req: SearchRequest) => {
-          console.log('Got new search request:', req);
           this.searchResult = this.filterPatients(req);
           this.todaysResult = this.filterTodaysPatients(this.getTodaysDate())
-          console.log("Here is the search result: ", this.searchResult)
-          console.log("Here is the todays result: ", this.todaysResult)
         }); 
       }
 

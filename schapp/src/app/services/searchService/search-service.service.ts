@@ -36,7 +36,6 @@ export class SearchServiceService {
   readonly searchRequest = this._searchRequest.asObservable();
 
   setSearchRequest(req: SearchRequest) {
-    console.log("From the service: ", req)
     this._searchRequest.next(req);
   }
 

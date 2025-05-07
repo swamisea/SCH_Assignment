@@ -37,7 +37,6 @@ export class SearchPatientCardComponent {
 
 
   onSearch(){
-    console.log(this.searchForm.value)
     const request = this.searchService.setSearchRequest(
       this.searchForm.value
     )
