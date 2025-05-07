@@ -1,0 +1,59 @@
+.patient-card {
+    padding: 20px;
+}
+
+.patient-card-header {
+    border-bottom: gray 1px solid;
+}
+
+.patient-card-info{
+    padding-top: 20px;
+}
+
+.timing {
+    padding-top: 10px;
+    padding-right: 0px;
+    justify-items: flex-end;
+}
+
+.timing strong {
+    font-size: large;
+}
+
+.timing small {
+    font-size: medium;
+}
+
+.pfp {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+
+.dashed-separator {
+    border-top: 2px dashed #007bff;
+    /* match your accent color */
+}
+
+.field-name{
+    font-weight: bold;
+}
+
+.nav-tabs{
+    border: none;
+}
+
+.nav-tabs .nav-link{
+    border: none;
+}
+
+.active-tab{
+    border-bottom: #475F66 1px solid;
+    padding-bottom: 10px;
+    color: #475F66;
+}
+
+.bi-chevron-right{
+    padding: 0px;
+    margin: 0px;
+}

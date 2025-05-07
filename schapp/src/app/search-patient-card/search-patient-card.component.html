@@ -1,0 +1,94 @@
+
+<h4 class="search-title"><i class="bi bi-search me-1"></i>Search your patients</h4>
+<div class="card shadow-lg">
+    <div class="card-header">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" [class.active]="activeTab==='basic'"
+                    (click)="selectTab('basic')">
+                    Basic
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [class.active]="activeTab==='advanced'" (click)="selectTab('advanced')">
+                    Advanced
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card-body">
+        <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+            <div *ngIf="activeTab==='basic'">
+                <div class="row g-3 mb-4 bio">
+                    <div class="form-bio-header col-md-12">
+                        <p>Patient Info</p>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" formControlName="firstName">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" formControlName="lastName">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" formControlName="dob">
+                    </div>
+                </div>
+                <div class="row g-3 mb-4 dates">
+                    <div class="form-dates-header col-md-12">
+                        <p>Appointment Range</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Start Date</label>
+                        <input type="date" class="form-control" formControlName="startDate">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">End Date</label>
+                        <input type="date" class="form-control" formControlName="endDate">
+                    </div>
+                </div>
+                <div class="text-end">
+                    <button type="submit" class="btn">Search</button>
+                </div>
+            </div>
+
+            <div *ngIf="activeTab==='advanced'">
+                <div class="row g-3 mb-4 ">
+                    <div class="col-md-4">
+                        <label class="form-label">MRN</label>
+                        <input type="text" class="form-control" formControlName="mrn">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">ID Number</label>
+                        <input type="text" class="form-control" formControlName="id">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Last 4 digits of SSN</label>
+                        <input type="number" class="form-control" formControlName="ssn">
+                    </div>
+                </div>
+                <div class="row g-3 mb-4 ">
+                    <div class="col-md-4">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" formControlName="phone">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" formControlName="email">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Hospital</label>
+                        <input type="text" class="form-control" formControlName="hospital">
+                    </div>
+                </div>
+                <div class="text-end">
+                    <button type="submit" class="btn">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
